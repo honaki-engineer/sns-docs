@@ -138,7 +138,7 @@
 | カラム名            | 型                      | NULL許可   | デフォルト         | キー種別 | 備考                                                   |
 |-------------------|-------------------------|-----------|-------------------|--------|--------------------------------------------------------|
 | post_id           | BIGINT UNSIGNED         | NO        |                   | FK     | posts.id（ON DELETE CASCADE）                           |
-| tag_id            | BIGINT UNSIGNED         | NO        |                   | FK     | tags.id（タグは運用上削除しない前提）                       |
+| tag_id            | BIGINT UNSIGNED         | NO        |                   | FK     | tags.id                                                |
 | （複合主キー）       | —                       | —         | —                 | PK     | post_id, tag_id ： 重複付与禁止（組み合わせで一意）         |
 | created_at        | TIMESTAMP               | YES       |                   |        | Eloquent管理                                           |
 | updated_at        | TIMESTAMP               | YES       |                   |        | Eloquent管理                                           |
