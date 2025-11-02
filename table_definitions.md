@@ -44,7 +44,7 @@
 | updated_at        | TIMESTAMP               | YES       |                   |        | Eloquent管理                                           |
   
 **主メール1件の担保**  
-- 生成列 `primary_member_id`（VIRTUAL）＋ `UNIQUE (primary_member_id)` で、**is_primary=1 の行のみ会員ごと一意**。
+- 生成列 `primary_member_id`（VIRTUAL）＋ `UNIQUE (primary_member_id)` で、**is_primary=1 の行のみ会員ごと一意**。  
 ※ マイグレーションでは DB::statement() で ALTER TABLE（仮想列） と CREATE UNIQUE INDEX（UNIQUE設定） を追加。
 
 ---
